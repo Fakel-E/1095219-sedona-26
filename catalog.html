@@ -8,40 +8,46 @@
 
 <body>
   <header>
-    <div>
-      <img src="img/logo.png" alt="тут будет логотип">
-    </div>
-    <nav>
+    <a href="index.html">
+      <img src="img/logo.png" alt="Логотип города Седона">
+    </a>
+    <nav aria-label="Навигация по странице">
       <ul>
-        <li><a href="#">информация</a></li>
-        <li><a href="#">фото и видео</a></li>
-        <li><a href="#">карта штата</a></li>
-        <li><a href="#">гостиницы</a></li>
+        <li><a href="index.html">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
   <section>
-    <div>
-      <ul>
-        <li>
-          <h4>инфраструктура:</h4>
-        </li>
-        <li>бассейн</li>
-        <li>парковка</li>
-        <li>wi-fi</li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li>
-          <h4>тип жилья:</h4>
-        </li>
-        <li>гостиница</li>
-        <li>мотель</li>
-        <li>апартаменты</li>
-      </ul>
-    </div>
-    <div>
+    <section>
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <label for="pool">Бассейн</label>
+          <input type="checkbox" name="pool" id="pool" checked>
+          <label for="parking">Парковка</label>
+          <input type="checkbox" name="parking" id="parking">
+          <label for="pool">wi-fi</label>
+          <input type="checkbox" name="wi-fi" id="wi-fi">
+        </fieldset>
+      </form>
+    </section>
+    <section>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <label for="hotel">Гостиница</label>
+            <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="motel">Мотель</label>
+            <input type="checkbox" name="motel" id="motel" checked>
+            <label for="aparts">Апартаменты</label>
+            <input type="checkbox" name="aparts" id="aparts" checked>
+          </fieldset>
+        </form>
+    </section>
+    <section>
       <p> Стоимость в сутки (Р):</p>
       <table>
         <tr>
@@ -50,8 +56,8 @@
         </tr>
       </table>
       <input type="range" min="0" max="4000" step="1000" value="2500">
-      <button>Показать</button>
-    </div>
+      <button type="button">Показать</button>
+    </section>
   </section>
   <section>
     <div>
@@ -72,7 +78,7 @@
         <img src="img/1catalog.jpg" alt="фото отеля">
       </div>
       <div>
-        <h3>amara resort & spa</h3>
+        <h3>Amara resort & spa</h3>
         <p>гостиница от 4000 Р.</p>
         <div>
           <a href="#">Подробнее</a>
@@ -92,7 +98,7 @@
         <img src="img/3catalog.jpg" alt="фото отеля">
       </div>
       <div>
-        <h3>desert quail inn</h3>
+        <h3>Desert quail inn</h3>
         <p>мотель от 3000 Р.</p>
         <div>
           <a href="#">Подробнее</a>
@@ -126,14 +132,18 @@
     </div>
   </section>
   <footer>
-    <p>#VisitSedona</p>
-    <ul>
-      <li><a href="#">Вконтакте</a></li>
-      <li><a href="#">Фейсбук</a></li>
-      <li><a href="#">Ю-туб</a></li>
-    </ul>
-    <p>Website by <a href="img/logohtmlacademy.svg">HTML Academy</a></p>
-  </footer>
+
+      <a href="index.html">#VisitSedona</a>
+
+      <ul>
+        <li><a href="#">Вконтакте</a></li>
+        <li><a href="#">Фейсбук</a></li>
+        <li><a href="#">Ю-туб</a></li>
+      </ul>
+
+      <p>Website by <a href="img/logohtmlacademy.svg">HTML Academy</a></p>
+
+    </footer>
 </body>
 
 </html>

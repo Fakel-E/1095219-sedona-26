@@ -4,30 +4,32 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <div>
-      <img src="img/logo.png" alt="тут будет логотип">
-    </div>
-    <nav>
+    <a href="index.html">
+      <img src="img/logo.png" alt="Логотип города Седона">
+    </a>
+    <nav aria-label="Навигация по странице">
       <ul>
-        <li><a href="#">информация</a></li>
-        <li><a href="#">фото и видео</a></li>
-        <li><a href="#">карта штата</a></li>
-        <li><a href="catalog.html">гостиницы</a></li>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Город Седона</h1>
-    <div>
+    <h1 class="visually-hidden">Туристический городок Седона</h1>
+    <p>
       <img src="img/welcome.png" alt="Welcome to the gorgeous SEDONA Because the grand canyoun lucks!">
-    </div>
+    </p>
+
     <section>
-      <h2>Преимущества</h2>
+      <h2 class="visually-hidden">Преимущества</h2>
       <p>Седона - небольшой городок в аризоне, заслуживающий большего!</p>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон</p>
       <div>
@@ -37,7 +39,7 @@
           <p>Седона не атракцион для туристов. Там течет своя жизнь</p>
         </div>
         <div>
-          <img src="img/sedona.jpg" alt="тут будет фото городка">
+          <img src="img/sedona.jpg" alt="Фотография города Седона">
         </div>
       </div>
       <ul>
@@ -56,10 +58,10 @@
       </ul>
       <div>
         <div>
-          <img src="img/devilbridge.jpg" alt="тут будет фото моста">
+          <img src="img/devilbridge.jpg" alt="Фотография моста дьявола">
         </div>
         <div>
-          <h3>там есть мост дьявола</h3>
+          <h3>Там есть мост дьявола</h3>
           <p>№ 2</p>
           <p>да, по нему можно пройти! если конечно вы осмелитесь</p>
         </div>
@@ -82,16 +84,37 @@
         </li>
       </ul>
     </section>
+
     <section>
       <h2>Заинтересовались?</h2>
       <p>укажите предполагаемые даты поездки, и мы покажем вам лучшие предпожения гостиниц в Седоне</p>
       <a href="#">Поиск гостиниц в Седоне</a>
-      <form action="#" method="GET">
-        <!--Тут будет форма-->
-        <input type="submit" value="Найти">
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label for="check-in">Дата заезда</label>
+          <input type="text" name="check-in" id="check-in" placeholder="24 апреля 2017">
+        </p>
+        <p>
+          <label for="check-out">Дата выезда</label>
+          <input type="text" name="check-out" id="check-out" placeholder="4 июля 2017">
+        </p>
+        <p>
+          Взрослые
+          <button type="button">+</button>
+          <p>2</p>
+          <button type="button">-</button>
+        </p>
+        <p>
+          Дети
+          <button type="button">+</button>
+          <p>0</p>
+          <button type="button">-</button>
+        </p>
+        <a href="catalog.html">Найти</a>
       </form>
+
       <section class="map">
-        <!--Или карту сюда сейчас не вставлять?-->
+
         <iframe src="img/map.png" frameborder="0"></iframe>
       </section>
     </section>
@@ -99,7 +122,7 @@
 
   <footer>
 
-    <p>#VisitSedona</p>
+    <a href="index.html">#VisitSedona</a>
 
     <ul>
       <li><a href="#">Вконтакте</a></li>
