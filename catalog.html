@@ -21,8 +21,8 @@
     </nav>
   </header>
   <section>
-    <form action="https://echo.htmlacademy.ru" method="POST">
-      <section>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <div>
         <fieldset>
           <legend>Инфраструктура:</legend>
           <p>
@@ -34,12 +34,12 @@
             <input type="checkbox" name="parking" id="parking">
           </p>
           <p>
-            <label for="pool">wi-fi</label>
+            <label for="wi-fi">wi-fi</label>
             <input type="checkbox" name="wi-fi" id="wi-fi">
           </p>
         </fieldset>
-      </section>
-      <section>
+      </div>
+      <div>
         <fieldset>
           <legend>Тип жилья:</legend>
           <p>
@@ -55,20 +55,19 @@
             <input type="checkbox" name="aparts" id="aparts" checked>
           </p>
         </fieldset>
+      </div>
+      <div>
+        <!-- Тут потом сделаю форму.-->
+        <p> Стоимость в сутки (Р):</p>
+            от 0
+            до 3000
+
+        <input type="range" min="0" max="4000" step="1000" value="2500">
+        <button type="submit">Показать</button>
+      </div>
     </form>
   </section>
-  <section>
-    <p> Стоимость в сутки (Р):</p>
-    <table>
-      <tr>
-        <td>от 0</td>
-        <td>до 3000</td>
-      </tr>
-    </table>
-    <input type="range" min="0" max="4000" step="1000" value="2500">
-    <button type="button">Показать</button>
-  </section>
-  </section>
+
   <section>
     <div>
       <h3>Найдено: 3</h3>
