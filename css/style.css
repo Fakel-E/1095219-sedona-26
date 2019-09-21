@@ -1,5 +1,90 @@
 body {
+  margin: 0;
+  padding: 0;
 
+  font-family: 'PT Sans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  background-image: url("img/bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-nav {
+  font-size: 14px;
+  line-height: 26px;
+  background-color: #ffffff;
+}
+
+.site-nav {
+  list-style: none;
+}
+
+.site-nav a {
+  color: #000000;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #a3c7de;
+}
+
+.content {
+  position: relative;
+  top: 10px;
+  left: 412px;
+}
+
+.features-intro {
+  text-align: center;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.features-fraze {
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.polygon {
+  background-image: url("img/polygon.svg");
+  background-size: 1200px 215px;
+  background-color: #ffffff;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-item {
+  text-align: center;
+}
+
+.features-item h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+form {
+  text-align: center;
 }
 
 .visually-hidden {

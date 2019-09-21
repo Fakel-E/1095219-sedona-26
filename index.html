@@ -4,16 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <a href="index.html">
+  <header class="main-header">
+    <a href="index.html" class="logo">
       <img src="img/logo.png" alt="Логотип города Седона">
     </a>
-    <nav aria-label="Навигация по странице">
-      <ul>
+    <nav aria-label="Навигация по странице" class="main-nav">
+      <ul class="site-nav">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
@@ -22,16 +24,18 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <h1 class="visually-hidden">Туристический городок Седона</h1>
-    <p>
+    <p class="content">
       <img src="img/welcome.png" alt="Welcome to the gorgeous SEDONA Because the grand canyoun lucks!">
     </p>
 
-    <section>
+    <section class="features">
       <h2 class="visually-hidden">Преимущества</h2>
-      <p>Седона - небольшой городок в аризоне, заслуживающий большего!</p>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон</p>
+      <div class="polygon">
+        <p class="features-intro">Седона - небольшой городок в аризоне, заслуживающий большего!</p>
+        <p class="features-fraze">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон</p>
+      </div>
       <div>
         <div>
           <h3>Настоящий городок</h3>
@@ -42,17 +46,17 @@
           <img src="img/sedona.jpg" alt="Фотография города Седона">
         </div>
       </div>
-      <ul>
-        <li>
-          <h4>Жильё</h4>
+      <ul class="features-list">
+        <li class="features-item">
+          <h3>Жильё</h3>
           <p>рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         </li>
-        <li>
-          <h4>Еда</h4>
+        <li class="features-item">
+          <h3>Еда</h3>
           <p>всегда заказываёте фирменный бургер, вы не разочаруетесь</p>
         </li>
-        <li>
-          <h4>Сувениры</h4>
+        <li class="features-item">
+          <h3>Сувениры</h3>
           <p>не только китайского, но и местного производства</p>
         </li>
       </ul>
@@ -66,18 +70,18 @@
           <p>да, по нему можно пройти! если конечно вы осмелитесь</p>
         </div>
       </div>
-      <ul>
-        <li>
+      <ul class="features-list">
+        <li class="features-item">
           <h3>не большая площадь</h3>
           <p>№ 3</p>
           <p>все достопримечательности находятся очень близко</p>
         </li>
-        <li>
+        <li class="features-item">
           <h3>красивая дорога</h3>
           <p>№ 4</p>
           <p>ехать в седону из лас-вегаса совсем не скучно</p>
         </li>
-        <li>
+        <li class="features-item">
           <h3>мало туристов</h3>
           <p>№ 5</p>
           <p>большинство едет в грандканьон и толпится там</p>
@@ -87,7 +91,7 @@
 
     <section>
       <h2>Заинтересовались?</h2>
-      <p>укажите предполагаемые даты поездки, и мы покажем вам лучшие предпожения гостиниц в Седоне</p>
+      <p class="features-fraze">укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предпожения гостиниц в Седоне</p>
       <a href="#">Поиск гостиниц в Седоне</a>
       <form action="https://echo.htmlacademy.ru" method="post">
         <p>
