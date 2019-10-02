@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  margin-left: 40px;
+  margin-right: 40px;
 
   font-family: 'PT Sans', sans-serif;
   font-size: 14px;
@@ -17,9 +19,11 @@ a {
 }
 
 .container {
+  background-color: #ffffff;
   background-image: url("../img/bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
+  width: 1200px;
 }
 .main-nav {
   font-size: 14px;
@@ -63,6 +67,8 @@ a {
 }
 
 .polygon {
+  width: 1200px;
+  height: 215px;
   background-image: url("../img/polygon.svg");
   background-size: 1200px 215px;
   background-color: #ffffff;
@@ -89,7 +95,8 @@ a {
 }
 
 .popup {
-  text-align: center;
+  
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -102,6 +109,96 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/*Делаем сетки для index*/
+
+.main-header {
+  margin-bottom: -15px;
+  }
+.main-nav {
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: top;
+}
+.logo {
+  height: 71px;
+  width: 140px;
+  padding: 0;
+  margin: 0;
+  order: 2;
+}
+.features-list-one {
+  height: 256px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+.features-list {
+  height: 256px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.features-list-two {
+  height: 256px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+.search {
+  height: 86px;
+  width: 576px;
+  margin: 0 auto;
+  background-color: #766357;
+  color: #ffffff;
+  text-align: center;
+}
+.popup {
+  width: 576px;
+  height: 486px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.number-guest {  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.adults {
+  height: 33px;
+  width: 230px;
+}
+.children {
+  height: 33px;
+  width: 230px;
+}
+.found {
+  height: 59px;
+  width: 459px;
+  margin: 0 auto;
+  background-color: #81b3d2;
+  text-align: center;
+}
+.found a {
+  padding-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+}
+.footer {
+  height: 120px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fbf6;
+}
+
 /*Окончание стилей index.html*/
 /*Старт стилей catalog.html*/
 .catalog-main {
@@ -109,6 +206,7 @@ a {
   background-position: top;
   background-repeat: no-repeat;
   background-color: #ffffff;
+  width: 1200px;
 }
 
 .search {
@@ -138,6 +236,7 @@ a {
 
 .catalog-content {
   background-color: #ffffff;
+  width: 1200px;
 }
 
 .hotel-name {
@@ -198,4 +297,50 @@ a {
 .reserv:active {
   color: #928a85;
   background-color: #503e33;
+}
+/* Делаем сетки для catalog*/
+
+.points {
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: space-between;
+}
+.points-two {
+  margin-left: -300px;
+}
+.catalog-found {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel-amara {
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: top;
+}
+.hotel-desert {
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: top;
+}
+.hotel-villas {
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: top;
+}
+.rate {
+  
 }
