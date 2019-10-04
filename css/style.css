@@ -68,10 +68,11 @@ a {
 
 .polygon {
   width: 1200px;
-  height: 215px;
-  background-image: url("../img/polygon.svg");
+  height: 274px;
+  background-image: url("../img/polygon.svg") !important;
   background-size: 1200px 215px;
   background-color: #ffffff;
+  
 }
 
 .features-list {
@@ -198,7 +199,12 @@ a {
   align-items: center;
   background-color: #f9fbf6;
 }
-
+.footer-contacts {
+  margin-left: 132px;
+}
+.footer-htmlacademy {
+  margin-right: 101px;
+}
 /*Окончание стилей index.html*/
 /*Старт стилей catalog.html*/
 .catalog-main {
@@ -315,6 +321,10 @@ a {
 .catalog-list {
   display: flex;
   justify-content: space-between;
+  
+}
+.catalog-item {
+  margin: 10px;
 }
 
 .hotel-amara {
@@ -324,6 +334,7 @@ a {
   display: flex;
   /*flex-direction: column;*/
   align-items: top;
+  justify-content: space-between;
 }
 .hotel-desert {
   width: 1200px;
@@ -331,6 +342,8 @@ a {
   margin: 0;
   display: flex;
   /*flex-direction: column;*/
+  justify-content: space-between;
+  
   align-items: top;
 }
 .hotel-villas {
@@ -340,6 +353,7 @@ a {
   display: flex;
   /*flex-direction: column;*/
   align-items: top;
+  justify-content: space-between;
 }
 .rate {
   
