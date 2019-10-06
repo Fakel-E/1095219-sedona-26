@@ -4,7 +4,7 @@ body {
   margin-left: 40px;
   margin-right: 40px;
 
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
@@ -13,32 +13,56 @@ body {
 
   background-color: #f2f2f2;
 }
-
 a {
   text-decoration: none;
 }
 
-.container {
-  background-color: #ffffff;
-  background-image: url("../img/bg.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
+.container-centr {
   width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.main-header {
+  position: relative;
 }
 .main-nav {
+  /* Общий стиль*/
   font-size: 14px;
   line-height: 26px;
-  background-color: #ffffff;
+  /*Сетка*/
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
-
+.logo {
+  height: 71px;
+  width: 140px;
+  padding: 0;
+  margin: 0;
+  order: 2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -70px;
+  /*Вопрос: почему логотип прячется за фоновым изображением?*/
+}
 .site-nav {
   list-style: none;
-}
 
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  margin-right: 73px;
+  margin-left: 73px;
+  margin-bottom: 22px;
+  padding: 0px;
+  width: 100%;
+}
 .site-nav-list {
   color: #000000;
+  width: 25%;
 }
-
 .site-nav a:hover,
 .site-nav a:focus {
   color: #a3c7de;
@@ -47,45 +71,66 @@ a {
   color: #cacaca;
 }
 
-.content {
+.welcome {
   position: relative;
-  top: 10px;
-  left: 412px;
+  background-color: #ffffff;
+  background-image: url("../img/bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 1200px 800px;
+  min-height: 512px; 
+  /*Вопрос: Не понимаю, как сдвинуть ниже. Если убираю высоту, всё прилипает друг к другу*/
+  /*Вопрос: так же не понимаю, как убрать рассояние между полигоном, и следующим блоком*/
 }
-
+.welcome-img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 77px;  
+}
+.welcome::after {
+  content: url(../img/polygon.svg);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/*Стили для преимужеств на главной странице*/
 .features-intro {
   text-align: center;
   font-size: 21px;
   line-height: 26px;
 }
-
 .features-fraze {
   text-align: center;
   font-size: 14px;
   line-height: 26px;
   color: #333333;
 }
-
-.polygon {
-  width: 1200px;
-  height: 274px;
-  background-image: url("../img/polygon.svg") !important;
-  background-size: 1200px 215px;
-  background-color: #ffffff;
-  
+.features-list-one {  
+  display: flex;
 }
-
+.features-list-two {
+  display: flex;
+}
 .features-list {
   list-style: none;
-}
 
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center;*/
+  margin: 0px;
+  padding: 0px;
+  width: 33,33%;
+  /**/
+}
 .features-item {
   text-align: center;
 }
-
 .features-item h3 {
   font-size: 21px;
   line-height: 21px;
+}
+.grey {
+  background-color: #eeeeee;
 }
 
 .subtitle {
@@ -95,71 +140,23 @@ a {
   color: #000000;
 }
 
-.popup {
-  
-  background-color: #ffffff;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-/*Делаем сетки для index*/
-
-.main-header {
-  margin-bottom: -15px;
-  }
-.main-nav {
-  width: 1200px;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  /*flex-direction: column;*/
-  align-items: top;
-}
-.logo {
-  height: 71px;
-  width: 140px;
-  padding: 0;
-  margin: 0;
-  order: 2;
-}
-.features-list-one {
-  height: 256px;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-}
-.features-list {
-  height: 256px;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.features-list-two {
-  height: 256px;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-}
-.search {
-  height: 86px;
+.search-main {
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
   width: 576px;
+
   margin: 0 auto;
   background-color: #766357;
   color: #ffffff;
   text-align: center;
+  /*Вопрос: почему кнопка не встаёт по центру?*/
+  /*Вопрос: почему высота этой кнопки отличается от кнопки "Найти"?*/
+  /*Вопрос: свойство font-style: bold; не работает. Причина в шрифтах?*/
 }
 .popup {
   width: 576px;
-  height: 486px;
+  
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -171,15 +168,15 @@ a {
   justify-content: space-between;
 }
 .adults {
-  height: 33px;
   width: 230px;
 }
 .children {
-  height: 33px;
   width: 230px;
 }
 .found {
-  height: 59px;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
   width: 459px;
   margin: 0 auto;
   background-color: #81b3d2;
@@ -192,8 +189,6 @@ a {
   color: #ffffff;
 }
 .footer {
-  height: 120px;
-  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -205,6 +200,17 @@ a {
 .footer-htmlacademy {
   margin-right: 101px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /*Окончание стилей index.html*/
 /*Старт стилей catalog.html*/
 .catalog-main {
@@ -212,22 +218,35 @@ a {
   background-position: top;
   background-repeat: no-repeat;
   background-color: #ffffff;
-  width: 1200px;
+}
+.points {
+  display: flex;
+}
+fieldset {
+  border: none;
+}
+.hotel-form {
+  margin-left: auto;
 }
 
-.search {
-  font-size: 21px;
-  line-height: 26px;
-  color: #000000;
+.catalog-content {
+  background-color: #ffffff;
 }
-
+.catalog-found {
+  display: flex;
+  justify-content: space-between;
+}
 .catalog-list {
   list-style: none;
-}
 
+  display: flex;
+  justify-content: space-between;
+}
 .catalog-item {
   font-size: 12px;
   line-height: 18px;
+
+  margin: 10px;
 }
 .btn {
   color: #cacaca;
@@ -240,9 +259,24 @@ a {
   color: #000000;
 }
 
-.catalog-content {
-  background-color: #ffffff;
-  width: 1200px;
+.hotel-amara {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.hotel-desert {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.hotel-villas {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.about-hotel {
+  margin-left: 28px;
+  /*Вопрос: как текст прибить к верхней линии*/
 }
 
 .hotel-name {
@@ -263,98 +297,42 @@ a {
   line-height: 21px;
   color: #333333;
 }
-
 .detail {
   font: inherit;
-
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
   text-transform: uppercase;
-
   background-color: #81b3d2;
   border: none;
 }
-
-.reserv {
-  font: inherit;
-
-  text-align: center;
-  color: #ffffff;
-  vertical-align: middle;
-  text-transform: uppercase;
-
-  background-color: #766357;
-  border: none;
-}
-
 .detail:hover,
 .detail:focus {
   background-color: #669ec0;
-}
-.reserv:hover,
-.reserv:focus {
-  background-color: #604e43;
 }
 .detail:active {
   color: #93b9d2;
   background-color: #5496bd;
 }
+
+.reserv {
+  font: inherit;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #766357;
+  border: none;
+}
+.reserv:hover,
+.reserv:focus {
+  background-color: #604e43;
+}
 .reserv:active {
   color: #928a85;
   background-color: #503e33;
 }
-/* Делаем сетки для catalog*/
 
-.points {
-  display: flex;
-  /*flex-direction: column;*/
-  justify-content: space-between;
-}
-.points-two {
-  margin-left: -300px;
-}
-.catalog-found {
-  display: flex;
-  justify-content: space-between;
-}
-.catalog-list {
-  display: flex;
-  justify-content: space-between;
-  
-}
-.catalog-item {
-  margin: 10px;
-}
-
-.hotel-amara {
-  width: 1200px;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  /*flex-direction: column;*/
-  align-items: top;
-  justify-content: space-between;
-}
-.hotel-desert {
-  width: 1200px;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  /*flex-direction: column;*/
-  justify-content: space-between;
-  
-  align-items: top;
-}
-.hotel-villas {
-  width: 1200px;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  /*flex-direction: column;*/
-  align-items: top;
-  justify-content: space-between;
-}
 .rate {
-  
+  margin-left: auto;
 }
