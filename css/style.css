@@ -45,19 +45,18 @@ a {
   top: 0;
   left: 50%;
   margin-left: -70px;
-  /*Вопрос: почему логотип прячется за фоновым изображением?*/
+  z-index: 1;
 }
 .site-nav {
   list-style: none;
 
   display: flex;
   justify-content: space-between;
-  margin-top: 22px;
-  margin-right: 73px;
-  margin-left: 73px;
-  margin-bottom: 22px;
-  /*Вопрос: по скайпу ты мне показывал, отспуты делать padding. Можно ли делать, как сейчас у меня?*/
-  padding: 0px;
+  padding-top: 22px;
+  padding-right: 73px;
+  padding-left: 73px;
+  padding-bottom: 22px;
+  margin: 0px;
   width: 100%;
 }
 .site-nav-list {
@@ -79,9 +78,7 @@ a {
   background-position: top;
   background-repeat: no-repeat;
   background-size: 1200px 800px;
-  min-height: 512px; 
-  /*Вопрос: Не понимаю, как сдвинуть ниже. Если убираю высоту, всё прилипает друг к другу*/
-  /*Вопрос: так же не понимаю, как убрать рассояние между полигоном, и следующим блоком*/
+  padding-bottom: 52px;
 }
 .welcome-img {
   display: block;
@@ -92,7 +89,9 @@ a {
   content: url(../img/polygon.svg);
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2.4px;
+  line-height: 0;
+  /*Вопрос: неожиданно возник. Почему мы именно псевдоэлемент здесь используем? Какая логика? :)*/
 }
 /*Стили для преимужеств на главной странице*/
 .features-intro {
@@ -117,14 +116,13 @@ a {
 
   display: flex;
   justify-content: space-between;
-  /*align-items: center;*/
   margin: 0px;
   padding: 0px;
-  width: 33,33%;
-  /**/
+  
 }
 .features-item {
   text-align: center;
+  width: 33.33%;
 }
 .features-item h3 {
   font-size: 21px;
@@ -145,15 +143,19 @@ a {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  font-weight: 700;
   width: 576px;
 
+  display: inline-block;
+  
   margin: 0 auto;
   background-color: #766357;
   color: #ffffff;
-  text-align: center;
-  /*Вопрос: почему кнопка не встаёт по центру?*/
-  /*Вопрос: почему высота этой кнопки отличается от кнопки "Найти"?*/
-  /*Вопрос: свойство font-style: bold; не работает. Причина в шрифтах?*/
+  
+  
+  /*Вопрос: почему кнопка не встаёт по центру?
+  Что-то я тут совсем ничего не понимаю. У меня даже кнопка "найти", если отключить маргин, не перемещается, а стоит строго по центру*/
+ 
 }
 .popup {
   width: 576px;
@@ -178,10 +180,11 @@ a {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  font-weight: 700;
   width: 459px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   background-color: #81b3d2;
-  text-align: center;
+  /*text-align: center;*/
 }
 .found a {
   padding-top: auto;
@@ -277,13 +280,13 @@ fieldset {
 }
 .about-hotel {
   margin-left: 28px;
-  /*Вопрос: как текст прибить к верхней линии*/
 }
 
 .hotel-name {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
+  margin-top: 0;
 }
 .hotel-name:hover,
 .hotel-name:focus {
