@@ -16,6 +16,10 @@ body {
 a {
   text-decoration: none;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .container-centr {
   width: 1200px;
@@ -31,7 +35,7 @@ a {
   font-size: 14px;
   line-height: 26px;
   /*Сетка*/
-  padding: 0;
+  /* padding: 30px, 6%; */
   margin: 0;
   display: flex;
 }
@@ -49,20 +53,26 @@ a {
 }
 .site-nav {
   list-style: none;
-
+  
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 22px;
-  padding-right: 73px;
-  padding-left: 73px;
-  padding-bottom: 22px;
+  
   margin: 0px;
   width: 100%;
 }
 .site-nav-list {
   color: #000000;
   width: 25%;
+  /* box-sizing: border-box; */
+  display: block;
+  padding-top: 15px;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-bottom: 15px;
+  /* Вопрос: Не понимаю, почему у меня текст в li переносится на следующую строку. За счёт чего это можно исправить? */
 }
+
 .site-nav a:hover,
 .site-nav a:focus {
   color: #a3c7de;
@@ -91,7 +101,7 @@ a {
   left: 0;
   bottom: -2.4px;
   line-height: 0;
-  /*Вопрос: неожиданно возник. Почему мы именно псевдоэлемент здесь используем? Какая логика? :)*/
+  
 }
 /*Стили для преимужеств на главной странице*/
 .features-intro {
@@ -107,14 +117,36 @@ a {
 }
 .features-list-one {  
   display: flex;
+  flex-wrap: wrap;
+  margin-top: 59px;
+  /*Вопрос: Фотографии города и моста дьявола нужно в фотошопе обрезать? Или через z-index загонять под верхний фон? */
+}
+.features-list-one-color {
+  color: #ffffff;
+  text-align: center;
+  width: 400px;
+  background-color: #81b3d2;
+  padding-top: 100px;
+
+}
+.features-list-one-color p {
+  padding-left: 59px;
 }
 .features-list-two {
   display: flex;
+  flex-wrap: wrap;
+}
+.features-list-two-color {
+  color: #ffffff;
+  text-align: center;
+  width: 400px;
+  background-color: #81b3d2;
 }
 .features-list {
   list-style: none;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0px;
   padding: 0px;
@@ -153,9 +185,7 @@ a {
   color: #ffffff;
   
   
-  /*Вопрос: почему кнопка не встаёт по центру?
-  Что-то я тут совсем ничего не понимаю. У меня даже кнопка "найти", если отключить маргин, не перемещается, а стоит строго по центру*/
- 
+  
 }
 .popup {
   width: 576px;
@@ -192,17 +222,65 @@ a {
   margin-right: auto;
   color: #ffffff;
 }
+
+.map {
+  margin: 0;
+}
+
 .footer {
+  padding-top: 37px;
+  padding-bottom: 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f9fbf6;
-}
+  opacity: 0.9;
+} 
+/* Вопрос: Карту мы прячем под футер с помощью position: absolute? Или есть другой способ? */
 .footer-contacts {
   margin-left: 132px;
 }
+.footer-social {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 152px;
+  margin: 0 auto;
+  padding: 0;
+}
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 49px;
+
+  background-color: #81b3d2;
+}
+.social-button:focus,
+.social-button:hover {
+  background-color: #669ec0;
+}
+.social-button:active {
+  background-color: #5496bd;
+}
+.social-button:active path {
+  fill: #88b6d1;
+}
+
 .footer-htmlacademy {
-  margin-right: 101px;
+  margin-right: 8px;
+}
+.htmlacademy-btn {
+  margin-right: 100px;
+}
+.htmlacademy-btn:focus path,
+.htmlacademy-btn:hover path {
+  fill: #81b3d2;
+}
+.htmlacademy-btn:active path {
+  fill: #bdbbbc;
 }
 
 .visually-hidden {
