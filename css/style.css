@@ -21,7 +21,7 @@ img {
   height: auto;
 }
 
-.container-centr {
+.container-center {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -29,6 +29,7 @@ img {
 
 .main-header {
   position: relative;
+  /* margin: -20px; */
 }
 .main-nav {
   /* Общий стиль*/
@@ -36,7 +37,7 @@ img {
   line-height: 26px;
   /*Сетка*/
   /* padding: 30px, 6%; */
-  margin: 0;
+  margin: 0px;
   display: flex;
 }
 .logo {
@@ -66,10 +67,10 @@ img {
   width: 25%;
   /* box-sizing: border-box; */
   display: block;
-  padding-top: 15px;
+  /* padding-top: 15px;
   padding-right: 70px;
   padding-left: 70px;
-  padding-bottom: 15px;
+  padding-bottom: 15px; */
   /* Вопрос: Не понимаю, почему у меня текст в li переносится на следующую строку. За счёт чего это можно исправить? */
 }
 
@@ -96,7 +97,7 @@ img {
   padding-top: 77px;  
 }
 .welcome::after {
-  content: url(../img/polygon.svg);
+  content: url("../img/polygon.svg");
   position: absolute;
   left: 0;
   bottom: -2.4px;
@@ -119,18 +120,30 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-top: 59px;
-  /*Вопрос: Фотографии города и моста дьявола нужно в фотошопе обрезать? Или через z-index загонять под верхний фон? */
+  /*Вопрос: Фотографии города и моста дьявола нужно в фотошопе обрезать? Или через z-index загонять под верхний фон?
+  for call */
 }
 .features-list-one-color {
   color: #ffffff;
-  text-align: center;
+  /* text-align: center; */
   width: 400px;
   background-color: #81b3d2;
-  padding-top: 100px;
-
+  padding-top: 51px;
+  
+}
+.features-list-one-color h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  text-align: center;
 }
 .features-list-one-color p {
+  font-size: 14px;
+  line-height: 21px;
+  padding-right: 60px;
   padding-left: 59px;
+  font-weight: 400;
+  text-align: center;
 }
 .features-list-two {
   display: flex;
@@ -142,6 +155,23 @@ img {
   width: 400px;
   background-color: #81b3d2;
 }
+.features-list-two-color h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  padding-top: 49px;
+  padding-right: 125px;
+  padding-bottom: 31px;
+  padding-left: 125px;
+  margin: 0;
+}
+.features-list-two-color p {
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 48px;
+  padding-right: 50px;
+  font-weight: 400;
+}
 .features-list {
   list-style: none;
 
@@ -150,9 +180,11 @@ img {
   justify-content: space-between;
   margin: 0px;
   padding: 0px;
-  
+  /* min-height: 330px; */
 }
 .features-item {
+  position: relative;
+  padding-top: 164px;
   text-align: center;
   width: 33.33%;
 }
@@ -160,8 +192,52 @@ img {
   font-size: 21px;
   line-height: 21px;
 }
+.features-item p {
+  color: #333333;
+  margin-top: 0;
+  margin-right: 75px;
+  margin-bottom: 87px;
+  margin-left: 73px;
+}
 .grey {
+  color: #333333;
   background-color: #eeeeee;
+  min-height: 257px;
+  padding: 0;
+}
+.grey h3 {
+  padding-top: 50px;
+  padding-right: 55px;
+  padding-left: 68px;
+}
+.grey p {
+  margin-top: 32px;
+  margin-right: 9px;
+  margin-bottom: 63px;
+  margin-left: 23px;
+  padding-right: 45px;
+  padding-left: 45px;
+}
+  
+
+.home::before {
+  content: url("../img/home.svg");
+  position: absolute;
+  left: 162px;
+  bottom: 198px;
+
+}
+.food::before {
+  content: url("../img/food.svg");
+  position: absolute;
+  left: 162px;
+  bottom: 198px;
+}
+.box::before {
+  content: url("../img/box.svg");
+  position: absolute;
+  left: 162px;
+  bottom: 198px;
 }
 
 .subtitle {
@@ -177,15 +253,15 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   width: 576px;
-
-  display: inline-block;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  margin: 0;
+  /* display: inline-block; */
   
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: #766357;
   color: #ffffff;
-  
-  
-  
+  border: none;
 }
 .popup {
   width: 576px;
@@ -195,17 +271,47 @@ img {
   flex-direction: column;
   align-items: center;
 }
+.check-in,
+.check-out {
+  width: 346px;
+  height: 38px;
+  background-color: #f2f2f2;
+  color: #000000;
+  border: none;
+  margin-left: 21px;
+  padding-left: 12px;
+  box-sizing: border-box; 
+}
 .number-guest {  
   display: flex;
   align-items: center;
+  width: 459px;
   justify-content: space-between;
+  margin-bottom: 55px;
 }
 .adults {
-  width: 230px;
+  /* width: 459px; */
+  
+}
+.adults-btn-one,
+.adults-btn-two,
+.children-btn-one,
+.children-btn-two {
+  width: 41px;
+  height: 38px;
+  border: none;
+  background-color: #f2f2f2;
+}
+.adults-btn-one {
+  margin-left: 24px;
+}
+.children-btn-one {
+  margin-left: 27px;
 }
 .children {
-  width: 230px;
+  margin-left: 27px;
 }
+
 .found {
   font-size: 21px;
   line-height: 26px;
@@ -215,6 +321,11 @@ img {
   /*margin: 0 auto;*/
   background-color: #81b3d2;
   /*text-align: center;*/
+  border: none;
+
+  padding-top: 18px;
+  padding-bottom: 21px;
+  margin-bottom: 55px;
 }
 .found a {
   padding-top: auto;
@@ -224,7 +335,11 @@ img {
 }
 
 .map {
-  margin: 0;
+  background-image: url("../img/map.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 1718px 748px;
+  position: relative;
 }
 
 .footer {
@@ -235,7 +350,9 @@ img {
   align-items: center;
   background-color: #f9fbf6;
   opacity: 0.9;
-} 
+  /* position: absolute;
+  width: 1200px; */
+}
 /* Вопрос: Карту мы прячем под футер с помощью position: absolute? Или есть другой способ? */
 .footer-contacts {
   margin-left: 132px;
