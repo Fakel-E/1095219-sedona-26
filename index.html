@@ -44,8 +44,8 @@
             <p>- № 1 -</p>
             <p>Седона - не атракцион для туристов. Там течет своя жизнь</p>
           </div>
-          <div>
-            <img src="img/sedona.jpg" alt="Фотография города Седона" width="800px" height="401px">
+          <div class="features-list-one-img">
+            <img class="sedona-img" src="img/sedona.jpg" alt="Фотография города Седона" width="800px" height="401px">
           </div>
         </div>
         <ul class="features-list">
@@ -63,29 +63,29 @@
           </li>
         </ul>
         <div class="features-list-two">
-          <div>
-            <img src="img/devilbridge.jpg" alt="Фотография моста дьявола" width="800px" height="400px">
+          <div class="features-list-two-img">
+            <img class="bridge-img" src="img/devilbridge.jpg" alt="Фотография моста дьявола" width="800px" height="400px">
           </div>
           <div class="features-list-two-color">
-            <h3>Там есть мост дьявола</h3>
+            <h3>Там есть <br> мост дьявола</h3>
             <p>- № 2 -</p>
             <p>Да, по нему можно пройти! если конечно вы осмелитесь</p>
           </div>
         </div>
         <ul class="features-list grey">
           <li class="features-item grey">
-            <h3>не большая площадь</h3>
-            <p>№ 3</p>
+            <h3>небольшая площадь</h3>
+            <p>- № 3 -</p>
             <p>все достопримечательности находятся очень близко</p>
           </li>
           <li class="features-item grey">
             <h3>красивая дорога</h3>
-            <p>№ 4</p>
+            <p>- № 4 -</p>
             <p>ехать в седону из лас-вегаса совсем не скучно</p>
           </li>
           <li class="features-item grey">
             <h3>мало туристов</h3>
-            <p>№ 5</p>
+            <p>- № 5 -</p>
             <p>большинство едет в грандканьон и толпится там</p>
           </li>
         </ul>
@@ -103,35 +103,39 @@
           <p>
             <label for="check-in">Дата заезда</label>
             <input type="text" name="check-in" id="check-in" placeholder="24 апреля 2017" class="check-in">
+            <button type="button" class="calendar"><img src="img/calendar.svg" alt="календарик"></button>
           </p>
           <p>
             <label for="check-out">Дата выезда</label>
             <input type="text" name="check-out" id="check-out" placeholder="4 июля 2017" class="check-out">
+            <button type="button" class="calendar"><img src="img/calendar.svg" alt="календарик"></button>
           </p>
           <div class="number-guest">
-            <p class="">Взрослые:</p>
-            <button type="button" class="adults-btn-one">+</button>
-              2
-            <button type="button" class="adults-btn-two">-</button>    
-            
-            <p class="">Дети:</p>
-              <button type="button" class="children-btn-one">+</button>
-              0
-              <button type="button" class="children-btn-two">-</button>
-            
+            <div class="btn-adults">
+              <p>Взрослые:</p>
+              <button type="button" class="number-guest-btn left">+</button>
+              <input type="text" value="2" class="number-guest-btn">
+              <button type="button" class="number-guest-btn">-</button>    
+            </div>
+            <div class="btn-children">
+              <p>Дети:</p>
+              <button type="button" class="number-guest-btn">+</button>
+              <input type="text" value="0" class="number-guest-btn">
+              <button type="button" class="number-guest-btn">-</button>
+            </div>
           </div>
           <button type="button" class="found">
             <a href="catalog.html">Найти</a>
           </button>
         </form>
 
-        <section class="map">
-          <iframe src="img/map.png" frameborder="0" width="100%"></iframe>
-        </section>
+        
       </section>
     </main>
-
-    <footer class="footer">
+    <section class="map">
+      <!-- <iframe src="img/map.png" frameborder="0" width="100%"></iframe> -->
+    </section>
+    <footer class="footer footer-main">
 
       <a href="index.html" class="footer-contacts">#VisitSedona</a>
 
