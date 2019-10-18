@@ -299,18 +299,16 @@ img {
   padding-left: 12px;
   box-sizing: border-box;
 }
-.btn-adults p,
-.btn-children p {
+.date-in,
+.date-out {
   position: relative;
 }
 .calendar {
   border: none;
   position: absolute;
-  left: 800px;
-  /* top: 442px; */
-  /* Вопрос: абсолют же должен считаться от левой точки тега p. 
-  Почему, когда я задаю ему кординаты, он двигается от левой стороны экрана?
-  И как мне сделать так, чтобы при изменении разрешения этот календарь не перемещался? Так как сейчас он ползает по экрану :( */
+  left: 410px;
+  top: 5px;
+  background-color: #f2f2f2;
 }
 .number-guest {  
   display: flex;
@@ -391,7 +389,6 @@ img {
 .footer-main {
   position: absolute;
   width: 1200px;
-  /* Вопрос: Здесь нужно задавать значение ширины? или сдвинуть всё паддингами? Как правильнее? */
 }
 
 .footer-contacts {
@@ -457,6 +454,8 @@ img {
   background-position: top;
   background-repeat: no-repeat;
   background-color: #ffffff;
+  padding-left: 73px;
+  padding-right: 73px;
 }
 .points {
   display: flex;
@@ -470,6 +469,9 @@ fieldset {
 
 .catalog-content {
   background-color: #ffffff;
+  margin-left: 73px;
+  margin-right: 73px;
+  
 }
 .catalog-found {
   display: flex;
@@ -496,6 +498,31 @@ fieldset {
 }
 .btn:active {
   color: #000000;
+}
+.arrow-up {
+  background-image: url("../img/arrowup.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 13px;
+  height: 12px;
+  background-color: #ffffff;
+  padding-top: 39px;
+}
+.arrow-down {
+  background-image: url("../img/arrowdown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 13px;
+  height: 12px;
+  background-color: #ffffff;
+  padding-top: 39px;
+}
+.arrow-up:hover {
+  /* background-color: #81b3d2; */
+  /* Вопрос: могу ли я менять цвет кнопки (треугольника в частности), если он у меня как задний фон?
+  или я вообще не правильно его разместил? */
 }
 
 .hotel-amara {
@@ -536,7 +563,14 @@ fieldset {
   line-height: 21px;
   color: #333333;
 }
+.info-buy {
+  display: flex;
+}
 .detail {
+  display: block;
+  padding: 9px;
+  margin: 3.5px;
+
   font: inherit;
   text-align: center;
   color: #ffffff;
@@ -555,6 +589,10 @@ fieldset {
 }
 
 .reserv {
+  display: block;
+  padding: 9px;
+  margin: 3.5px;
+
   font: inherit;
   text-align: center;
   color: #ffffff;
@@ -574,4 +612,230 @@ fieldset {
 
 .rate {
   margin-left: auto;
+}
+.rate p {
+  display: block;
+
+  padding: 9px;
+  margin-top: 47px;
+  margin-bottom: 31px;
+  
+  color: #666666;
+  background-color: #f2f2f2;
+}
+.rating::after {
+  content: url("../img/star.svg");
+  left: auto;
+  /* Вопрос: как заставить span двигаться справа на лево? */
+
+  /* background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  width: 18px;
+  height: 18px; */
+}
+
+
+/* стилизация чек-боксов */
+
+.points-one legend,
+.points-two legend {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.points-one,
+.points-two {
+  color: #ffffff;
+}
+.points-one p,
+.points-two p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 23px;
+
+}
+.catalog-points {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-left: 39px;
+}
+
+.checkbox {
+  /* Прячем стандартную галочку */
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	/* margin: 10px 0 0 20px; */
+}
+.checkbox + label {
+  /* определяем относительно какого элемента absolute + определяем курсор */
+	position: relative;
+	/* padding: 0 0 0 60px; */
+	cursor: pointer;
+}
+
+.checkbox + label:before {
+  /* Определяем вид основного чекбокса */
+	content: url("../img/checkboxoff.svg");
+	position: absolute;
+	top: 0;
+	left: -39px;
+}
+
+/* .checkbox + label:after {
+	content: '';
+	position: absolute;
+	/* top: -2px;
+	left: 2px;	 
+} */
+
+.checkbox:checked + label:before {
+  /* определяем вид чекбокса осле нажатия */
+  content: url("../img/checkboxon.svg");
+}
+/* .checkbox:focus + label:before {
+  Вопрос: что значит в стайл-гайде заблокирован?
+  Вопрос: в данном случае фокус и ховер задавать каким объектам для изменения цвета картинки?
+} */
+
+/* Стили для фильтра */
+
+.filter-range {
+  width: 330px;
+  margin-top: 25px;
+  margin-left: auto;
+
+
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+  
+  font-size: 0;
+  font-weight: 400;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  /* Почему при изменении координаты Х не происходит перемещения ни в какую сторону? */
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
