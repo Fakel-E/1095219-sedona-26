@@ -87,7 +87,7 @@ img {
   background-position: top;
   background-repeat: no-repeat;
   background-size: 1200px 800px;
-  padding-bottom: 52px;
+  padding-bottom: 76px;
 }
 .welcome-img {
   display: block;
@@ -107,6 +107,9 @@ img {
   text-align: center;
   font-size: 21px;
   line-height: 26px;
+  padding: 0;
+  padding-top: 38px;
+  margin-bottom: 30px;
 }
 .features-fraze {
   text-align: center;
@@ -117,17 +120,15 @@ img {
 .features-list-one {  
   display: flex;
   flex-wrap: wrap;
-  margin-top: 59px;
-  /*Вопрос: Фотографии города и моста дьявола нужно в фотошопе обрезать? Или через z-index загонять под верхний фон?
-  for call */
+  margin-top: 52px;
+  
 }
 .features-list-one-color {
   color: #ffffff;
-  /* text-align: center; */
   width: 400px;
   background-color: #81b3d2;
-  padding-top: 51px;
-  padding-bottom: 64px;
+  padding-top: 24px;
+  padding-bottom: 47px;
 }
 .features-list-one-img {
   position: relative;
@@ -142,12 +143,16 @@ img {
   line-height: 21px;
   font-weight: 700;
   text-align: center;
+  padding-left: 140px;
+  padding-right: 140px;
+  padding-bottom: 5px;
 }
 .features-list-one-color p {
   font-size: 14px;
   line-height: 21px;
   padding-right: 60px;
   padding-left: 59px;
+  padding-top: 3px;
   font-weight: 400;
   text-align: center;
 }
@@ -160,7 +165,7 @@ img {
   text-align: center;
   width: 400px;
   background-color: #81b3d2;
-  padding-bottom: 66px;
+  padding-bottom: 37px;
 }
 .features-list-two-img {
   position: relative;
@@ -174,9 +179,9 @@ img {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  padding-top: 49px;
-  padding-right: 115px;
-  padding-bottom: 30px;
+  padding-top: 42px;
+  padding-right: 110px;
+  padding-bottom: 12px;
   padding-left: 115px;
   margin: 0;
 }
@@ -185,7 +190,7 @@ img {
   line-height: 21px;
   padding-left: 48px;
   padding-right: 50px;
-  
+  padding-bottom: 8px;
   font-weight: 400;
 }
 .features-list {
@@ -200,7 +205,7 @@ img {
 }
 .features-item {
   position: relative;
-  padding-top: 164px;
+  padding-top: 140px;
   text-align: center;
   width: 33.33%;
 }
@@ -211,28 +216,29 @@ img {
 .features-item p {
   color: #333333;
   margin-top: 0;
-  margin-right: 75px;
+  margin-right: 50px;
   margin-bottom: 87px;
-  margin-left: 73px;
+  margin-left: 50px;
 }
 .grey {
   
   background-color: #eeeeee;
   padding-top: 0;
+  padding-bottom: 20px;
 }
 .grey h3 {
-  padding-top: 50px;
-  padding-right: 143px;
+  padding-top: 47px;
+  padding-right: 145px;
   padding-left: 140px;
-  padding-bottom: 32px;
+  padding-bottom: 26px;
   margin: 0;
   color: #000000;
 }
 .grey p {
   margin-top: 0;
-  margin-right: 80px;
-  margin-bottom: 32px;
-  margin-left: 68px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  margin-left: 40px;
   color: #333333;
 }
   
@@ -262,31 +268,38 @@ img {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
+  margin-top: 50px;
 }
-
+.subtitle-btn {
+  text-align: center;
+  margin-top: 40px;
+  
+}
 .search-main {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
   font-weight: 700;
-  width: 576px;
-  padding-top: 33px;
+  width: 570px;
+  padding-top: 30px;
   padding-bottom: 33px;
   margin: 0;
-  /* display: inline-block; */
-  
-  /* margin: 0 auto; */
+
   background-color: #766357;
   color: #ffffff;
   border: none;
 }
 .popup {
-  width: 576px;
+  width: 570px;
   
-  margin: 0 auto;
+  margin-left: 315px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  z-index: 1;
+  background-color: #ffffff;
 }
 .check-in,
 .check-out {
@@ -306,8 +319,8 @@ img {
 .calendar {
   border: none;
   position: absolute;
-  left: 410px;
-  top: 5px;
+  left: 420px;
+  top: 8px;
   background-color: #f2f2f2;
 }
 .number-guest {  
@@ -315,11 +328,12 @@ img {
   align-items: center;
   width: 459px;
   justify-content: space-between;
-  margin-bottom: 55px;
+  margin-bottom: 49px;
 }
 .btn-adults,
 .btn-children {
   display: flex;
+  margin-top: 13px;
 }
 .btn-adults input,
 .btn-children input {
@@ -351,13 +365,11 @@ img {
   text-transform: uppercase;
   font-weight: 700;
   width: 459px;
-  /*margin: 0 auto;*/
   background-color: #81b3d2;
-  /*text-align: center;*/
   border: none;
 
-  padding-top: 18px;
-  padding-bottom: 21px;
+  padding-top: 15px;
+  padding-bottom: 16px;
   margin-bottom: 55px;
 }
 .found a {
@@ -382,17 +394,19 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f9fbf6;
-  opacity: 0.9;
+  background-color: rgba(249, 250, 248, 0.9);
   
 }
 .footer-main {
-  position: absolute;
+  margin-top: -28px;
   width: 1200px;
+  position: relative;
 }
 
 .footer-contacts {
   margin-left: 132px;
+  font-size: 21px;
+  line-height: 26px
 }
 .footer-social {
   list-style: none;
@@ -402,6 +416,7 @@ img {
   width: 152px;
   margin: 0 auto;
   padding: 0;
+  padding-left: 32px;
 }
 .social-button {
   display: flex;
@@ -454,8 +469,8 @@ img {
   background-position: top;
   background-repeat: no-repeat;
   background-color: #ffffff;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 .points {
   display: flex;
@@ -500,29 +515,34 @@ fieldset {
   color: #000000;
 }
 .arrow-up {
-  background-image: url("../img/arrowup.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
-  width: 13px;
-  height: 12px;
-  background-color: #ffffff;
-  padding-top: 39px;
+  padding: 0;
+  margin-top: 25px;
+  margin-right: 5px;
+  background: none;
+}
+.arrow-up svg {
+  fill: #cacaca;
 }
 .arrow-down {
-  background-image: url("../img/arrowdown.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: none;
-  width: 13px;
-  height: 12px;
-  background-color: #ffffff;
-  padding-top: 39px;
+  padding: 0;
+  margin-top: 25px;
+  margin-left: 5px;
+  background: none;
 }
-.arrow-up:hover {
-  /* background-color: #81b3d2; */
-  /* Вопрос: могу ли я менять цвет кнопки (треугольника в частности), если он у меня как задний фон?
-  или я вообще не правильно его разместил? */
+.arrow-down svg {
+  fill: #cacaca;
+}
+.arrow-up:hover svg,
+.arrow-down:hover svg,
+.arrow-up:focus svg,
+.arrow-down:focus svg {
+  fill: #231f20;
+}
+.arrow-up:active svg,
+.arrow-down:active svg {
+  fill: #81b3d2;
 }
 
 .hotel-amara {
@@ -613,6 +633,9 @@ fieldset {
 .rate {
   margin-left: auto;
 }
+.rate-star {
+  text-align: right;
+}
 .rate p {
   display: block;
 
@@ -666,12 +689,10 @@ fieldset {
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
-	/* margin: 10px 0 0 20px; */
 }
 .checkbox + label {
   /* определяем относительно какого элемента absolute + определяем курсор */
 	position: relative;
-	/* padding: 0 0 0 60px; */
 	cursor: pointer;
 }
 
@@ -682,23 +703,16 @@ fieldset {
 	top: 0;
 	left: -39px;
 }
-
-/* .checkbox + label:after {
-	content: '';
-	position: absolute;
-	/* top: -2px;
-	left: 2px;	 
-} */
-
 .checkbox:checked + label:before {
   /* определяем вид чекбокса осле нажатия */
   content: url("../img/checkboxon.svg");
 }
-/* .checkbox:focus + label:before {
-  Вопрос: что значит в стайл-гайде заблокирован?
-  Вопрос: в данном случае фокус и ховер задавать каким объектам для изменения цвета картинки?
-} */
-
+.checkbox:focus + label:before {
+  border: 1.5px solid #88b6d1;
+} 
+.checkbox:disabled + label:before {
+  opacity: 0.3;
+}
 /* Стили для фильтра */
 
 .filter-range {
@@ -743,7 +757,7 @@ fieldset {
 
   background: #ffffff;
   transform: translate(-50%, -50%);
-  /* Почему при изменении координаты Х не происходит перемещения ни в какую сторону? */
+  /* Вопрос: Почему при изменении координаты Х не происходит перемещения ни в какую сторону? */
 }
 
 .price-controls label {

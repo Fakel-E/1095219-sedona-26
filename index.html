@@ -19,6 +19,9 @@
         <ul class="site-nav">
           <li><a href="#" class="site-nav-list">Информация</a></li>
           <li><a href="#" class="site-nav-list">Фото и видео</a></li>
+          <!-- Вопрос: по PP "фото и видео" + ""карта штата"  должны стоять ближе друг к другу, хотя "информация" и "гостиница" находятся на своих местах. 
+            В данном случае стоит их как-то двигать, или нет? И если нужно, то за счет чего это делать? 
+            когда я добавлял падинги и марджины к li ехало всё меню. box-sizing добавлять?-->
           <li><a href="#" class="site-nav-list">Карта штата</a></li>
           <li><a href="catalog.html" class="site-nav-list">Гостиницы</a></li>
         </ul>
@@ -28,6 +31,11 @@
     <main class="">
       <h1 class="visually-hidden">Туристический городок Седона</h1>
       <div class="welcome">
+        <!-- Вопрос: оказалось, что у меня не правильная часть фона отображается.
+        За счет чего я могу двигать расположение фона так, чтобы не двигалось всё остальное?
+        С падингами и марджинами у меня ехало всё
+        Вопрос: оказалось, у меня на всех фотография не то изображается. Это значит я не правильно в фотошопе вырезал?
+        Или что-то другое? -->
         <img src="img/welcome.png" class="welcome-img" alt="Welcome to the gorgeous SEDONA Because the grand canyoun lucks!"
         height="353" width="459">
       </div>
@@ -35,7 +43,7 @@
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <div>
-          <p class="features-intro">Седона - небольшой городок в аризоне, заслуживающий большего!</p>
+          <p class="features-intro">Седона - небольшой городок в аризоне,<br> заслуживающий большего!</p>
           <p class="features-fraze">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон</p>
         </div>
         <div class="features-list-one">
@@ -76,17 +84,17 @@
           <li class="features-item grey">
             <h3>небольшая площадь</h3>
             <p>- № 3 -</p>
-            <p>все достопримечательности находятся очень близко</p>
+            <p>все достопримечательности <br> находятся очень близко</p>
           </li>
           <li class="features-item grey">
             <h3>красивая дорога</h3>
             <p>- № 4 -</p>
-            <p>ехать в седону из лас-вегаса совсем не скучно</p>
+            <p>ехать в седону из лас-вегаса совсем <br> не скучно</p>
           </li>
           <li class="features-item grey">
             <h3>мало туристов</h3>
             <p>- № 5 -</p>
-            <p>большинство едет в грандканьон и толпится там</p>
+            <p>большинство едет в грандканьон <br> и толпится там</p>
           </li>
         </ul>
       </section>
@@ -94,7 +102,7 @@
       <section>
         <h2 class="subtitle">Заинтересовались?</h2>
         <p class="features-fraze">укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предпожения гостиниц в Седоне</p>
-        <div style="text-align: center; margin-bottom: 55px;">
+        <div class="subtitle-btn">
           <button type="button" class="search-main">
             Поиск гостиниц в Седоне
           </button>
@@ -111,17 +119,20 @@
             <button type="button" class="calendar"><img src="img/calendar.svg" width="21" height="22" alt="календарик"></button>
           </p>
           <div class="number-guest">
+            <!-- Вопрос: эту часть не получается подогнать под PP. Что делаю не правильно? пробовал падингами и маржинами. 
+              Добавлял button и input в общий div, но тогда между ними появляется расстояние не известное откуда 
+              (даже при обнулении падингов и марджинов) -->
             <div class="btn-adults">
               <p>Взрослые:</p>
-              <button type="button" class="number-guest-btn left">+</button>
+              <button type="button" class="number-guest-btn left">-</button>
               <input type="text" value="2" class="number-guest-btn">
-              <button type="button" class="number-guest-btn">-</button>    
+              <button type="button" class="number-guest-btn">+</button>
             </div>
             <div class="btn-children">
               <p>Дети:</p>
-              <button type="button" class="number-guest-btn">+</button>
-              <input type="text" value="0" class="number-guest-btn">
               <button type="button" class="number-guest-btn">-</button>
+              <input type="text" value="0" class="number-guest-btn">
+              <button type="button" class="number-guest-btn">+</button>
             </div>
           </div>
           <button type="button" class="found">
