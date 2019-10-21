@@ -486,6 +486,7 @@ fieldset {
   background-color: #ffffff;
   margin-left: 73px;
   margin-right: 73px;
+  margin-bottom: -8px;
   
 }
 .catalog-found {
@@ -568,7 +569,9 @@ fieldset {
   margin: 0;
   display: flex;
   
-  /* Вопрос: Как сделать границы во всю ширину? При этом не убирая отступы у catalog-content? Или так не получится? */
+  /* Вопрос: Как сделать границы во всю ширину? Добавлял border или outline. 
+  Но граница рисуется только до заданных отступов в catalog-content. 
+  Можно ли убирая отступы у catalog-content сделать линии во всю страницу? Или так не получится? */
 }
 .hotel-amara::before {
   content: "";
@@ -582,9 +585,39 @@ fieldset {
 
   /* Вопрос: Можно ли использовать такое решение для границ?
   Но тут другая проблема, не хватает пары пикселей, чтобы красиво встала на всю ширину страницы
-  И у меня не получается отлипить картинку от этой линии :( */
+  \\  И у меня не получается отлипить картинку от этой линии - это вроде решил, но не уверен правильно ли \\
+  Также не получается добавить самую нижнию линию*/
+}
+.hotel-desert::before {
+  content: "";
+  position: absolute;
+
+  width: 1200px;
+  height: 2px;
+
+  background: #e5e5e5;
+  transform: translate(-6%, 0%);
+}
+.hotel-villas::before {
+  content: "";
+  position: absolute;
+
+  width: 1200px;
+  height: 2px;
+
+  background: #e5e5e5;
+  transform: translate(-6%, 0%);
 }
 
+.hotel-amara-img {
+  margin-top: 30px;
+}
+.hotel-desert-img {
+  margin-top: 27px;
+}
+.hotel-villas-img {
+  margin-top: 25px;
+}
 .hotel-desert {
   padding: 0;
   margin: 0;
@@ -603,7 +636,7 @@ fieldset {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
-  margin-top: 25px;
+  margin-top: 22px;
   margin-bottom: 0;
 }
 .hotel-name:hover,
@@ -657,7 +690,6 @@ fieldset {
   font: inherit;
   text-align: center;
   color: #ffffff;
-  vertical-align: middle;
   text-transform: uppercase;
   background-color: #766357;
   border: none;
@@ -676,12 +708,19 @@ fieldset {
 }
 .rate-star {
   text-align: right;
+  padding-top: 30px;
+}
+.rate-star:first-child {
+  padding-right: 5px;
 }
 .rate p {
   display: block;
 
-  padding: 9px;
-  margin-top: 47px;
+  padding-left: 15px;
+  padding-top: 9px;
+  padding-right: 11px;
+  padding-bottom: 6px;
+  margin-top: 34px;
   margin-bottom: 31px;
   
   color: #666666;
