@@ -30,7 +30,7 @@ img {
 .main-header {
   position: relative;
   padding: 16px 0;
-  /* Вопрос: почему вехние падинги задаём именно родителю? Можем ли мы паддинги задать li или ul? */
+  
 }
 .main-nav {
   font-size: 14px;
@@ -490,7 +490,17 @@ fieldset {
 }
 .catalog-found {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.catalog-found h3 {
+  font-size: 21px;
+  line-height: 26px;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 32px;
 }
 .catalog-list {
   list-style: none;
@@ -502,7 +512,11 @@ fieldset {
   font-size: 12px;
   line-height: 18px;
 
-  margin: 10px;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+.catalog-item:first-child {
+  margin-left: 0;
 }
 .btn {
   color: #cacaca;
@@ -513,6 +527,10 @@ fieldset {
 }
 .btn:active {
   color: #000000;
+}
+.btn-arrow {
+  margin-left: auto;
+  margin-top: 15px;
 }
 .arrow-up {
   border: none;
@@ -549,7 +567,24 @@ fieldset {
   padding: 0;
   margin: 0;
   display: flex;
+  
+  /* Вопрос: Как сделать границы во всю ширину? При этом не убирая отступы у catalog-content? Или так не получится? */
 }
+.hotel-amara::before {
+  content: "";
+  position: absolute;
+
+  width: 1200px;
+  height: 2px;
+
+  background: #e5e5e5;
+  transform: translate(-6%, 0%);
+
+  /* Вопрос: Можно ли использовать такое решение для границ?
+  Но тут другая проблема, не хватает пары пикселей, чтобы красиво встала на всю ширину страницы
+  И у меня не получается отлипить картинку от этой линии :( */
+}
+
 .hotel-desert {
   padding: 0;
   margin: 0;
@@ -568,7 +603,8 @@ fieldset {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
-  margin-top: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
 }
 .hotel-name:hover,
 .hotel-name:focus {
@@ -582,19 +618,24 @@ fieldset {
   font-size: 14px;
   line-height: 21px;
   color: #333333;
+  margin-top: 7px;
 }
 .info-buy {
   display: flex;
+  /* Вопрос: Проблема с размерами кнопок. Они получаются слишком жирными по сравнению с оригиналом.
+  Я не туда свойство указываю, или не там класс задал? */
 }
 .detail {
   display: block;
-  padding: 9px;
+  padding: 0;
+  padding-right: 16px;
+  padding-left: 15px;
   margin: 3.5px;
 
   font: inherit;
   text-align: center;
   color: #ffffff;
-  vertical-align: middle;
+  
   text-transform: uppercase;
   background-color: #81b3d2;
   border: none;
@@ -647,15 +688,7 @@ fieldset {
   background-color: #f2f2f2;
 }
 .rating::after {
-  content: url("../img/star.svg");
-  left: auto;
-  /* Вопрос: как заставить span двигаться справа на лево? */
-
-  /* background-image: url("../img/star.svg");
-  background-repeat: no-repeat;
-  background-color: #ffffff;
-  width: 18px;
-  height: 18px; */
+  content: url("../img/star.svg"); 
 }
 
 
@@ -663,8 +696,13 @@ fieldset {
 
 .points-one legend,
 .points-two legend {
-  padding-top: 30px;
+  font-size: 16px;
+  line-height: 21px;
+  padding-top: 28px;
   margin-bottom: 20px;
+}
+.points-two {
+  margin-left: 94px;
 }
 .points-one,
 .points-two {
@@ -716,9 +754,9 @@ fieldset {
 /* Стили для фильтра */
 
 .filter-range {
-  width: 330px;
+  width: 320px;
   margin-top: 25px;
-  margin-left: auto;
+  margin-left: 338px;
 
 
   color: #ffffff;
@@ -736,7 +774,7 @@ fieldset {
 .price-controls {
   position: relative;
   
-  height: 36px;
+  height: 35px;
   margin-bottom: 20px;
   
   font-size: 0;
@@ -757,7 +795,7 @@ fieldset {
 
   background: #ffffff;
   transform: translate(-50%, -50%);
-  /* Вопрос: Почему при изменении координаты Х не происходит перемещения ни в какую сторону? */
+  
 }
 
 .price-controls label {
@@ -773,7 +811,7 @@ fieldset {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 60px;
 }
 
 .price-controls input {
@@ -790,7 +828,7 @@ fieldset {
 .range-controls {
   position: relative;
 
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .range-controls .scale {
@@ -829,13 +867,14 @@ fieldset {
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 79%;
 }
 
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  margin-left: 85px;
+  padding: 6px 33px;
 
   font-size: 14px;
   line-height: 20px;
@@ -846,6 +885,7 @@ fieldset {
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
+  
 }
 
 .btn-transparent:hover {
