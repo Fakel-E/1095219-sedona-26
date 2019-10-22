@@ -517,7 +517,15 @@ fieldset {
   margin-left: 40px;
 }
 .catalog-item:first-child {
-  margin-left: 0;
+  margin-left: 5px;
+}
+.catalog-item:nth-child(3) {
+  margin-left: 34px;
+  margin-top: 24px;
+}
+.catalog-item:nth-child(4) {
+  margin-left: 34px;
+  margin-top: 24px;
 }
 .btn {
   color: #cacaca;
@@ -636,7 +644,7 @@ fieldset {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
-  margin-top: 22px;
+  margin-top: 24px;
   margin-bottom: 0;
 }
 .hotel-name:hover,
@@ -653,17 +661,23 @@ fieldset {
   color: #333333;
   margin-top: 7px;
 }
+.cost span {
+  margin-left: 36px;
+}
+
 .info-buy {
   display: flex;
+  padding-top: 1px;
   /* Вопрос: Проблема с размерами кнопок. Они получаются слишком жирными по сравнению с оригиналом.
   Я не туда свойство указываю, или не там класс задал? */
 }
 .detail {
-  display: block;
-  padding: 0;
+  display: inline-block;
+  margin-bottom: 17px;
+  padding-top: 4px;
   padding-right: 16px;
-  padding-left: 15px;
-  margin: 3.5px;
+  padding-left: 17px;
+  margin-right: 3.5px;
 
   font: inherit;
   text-align: center;
@@ -683,9 +697,13 @@ fieldset {
 }
 
 .reserv {
-  display: block;
-  padding: 9px;
-  margin: 3.5px;
+  display: inline-block;
+  margin-bottom: 17px;
+  padding-top: 4px;
+  padding-right: 16px;
+  padding-bottom: 4px;
+  padding-left: 17px;
+  margin-right: 3.5px;
 
   font: inherit;
   text-align: center;
@@ -710,9 +728,13 @@ fieldset {
   text-align: right;
   padding-top: 30px;
 }
-.rate-star:first-child {
-  padding-right: 5px;
+.rating:first-child {
+  margin-right: 4px;
 }
+.rating:nth-child(2) {
+  margin-right: 3px;
+}
+
 .rate p {
   display: block;
 
@@ -777,7 +799,7 @@ fieldset {
   /* Определяем вид основного чекбокса */
 	content: url("../img/checkboxoff.svg");
 	position: absolute;
-	top: 0;
+	top: -4px;
 	left: -39px;
 }
 .checkbox:checked + label:before {
