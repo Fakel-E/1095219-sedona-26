@@ -64,6 +64,14 @@ img {
 .site-nav li {
   width: 25%;
 }
+.site-nav li:nth-child(2) {
+  margin-right: 0px;
+  margin-left: -24px;
+}
+.site-nav li:nth-child(3) {
+  margin-left: 44px;
+  margin-right: -20px;
+}
 .site-nav li:nth-child(3),
 .site-nav li:nth-child(4) {
   text-align: right;
@@ -84,7 +92,7 @@ img {
   position: relative;
   background-color: #ffffff;
   background-image: url("../img/bg.jpg");
-  background-position: top;
+  background-position: right 0px top -61px;
   background-repeat: no-repeat;
   background-size: 1200px 800px;
   padding-bottom: 76px;
@@ -108,28 +116,37 @@ img {
   font-size: 21px;
   line-height: 26px;
   padding: 0;
-  padding-top: 38px;
+  margin: 0;
+  margin-top: 59px;
+  margin-right: 18px;
   margin-bottom: 30px;
+  margin-left: 28px;
 }
 .features-fraze {
   text-align: center;
   font-size: 14px;
   line-height: 26px;
   color: #333333;
+  padding: 0;
+  margin: 0;
 }
 .features-list-one {  
   display: flex;
   flex-wrap: wrap;
-  margin-top: 52px;
+  margin-top: 50px;
   
 }
 .features-list-one-color {
   color: #ffffff;
   width: 400px;
   background-color: #81b3d2;
-  padding-top: 24px;
-  padding-bottom: 47px;
+  
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 44px;
 }
+
 .features-list-one-img {
   position: relative;
   overflow: hidden;
@@ -137,24 +154,30 @@ img {
 }
 .sedona-img {
   position: absolute;
+  bottom: -67px;
 }
 .features-list-one-color h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   text-align: center;
-  padding-left: 140px;
-  padding-right: 140px;
-  padding-bottom: 5px;
+  padding: 0;
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 140px;
+  margin-right: 140px;
 }
 .features-list-one-color p {
   font-size: 14px;
   line-height: 21px;
-  padding-right: 60px;
-  padding-left: 59px;
-  padding-top: 3px;
   font-weight: 400;
   text-align: center;
+
+  padding: 0;
+  margin-top: 24px;
+  margin-right: 60px;
+  margin-left: 58px;
+  
 }
 .features-list-two {
   display: flex;
@@ -174,24 +197,27 @@ img {
 }
 .bridge-img {
   position: absolute;
+  top: -76px;
 }
 .features-list-two-color h3 {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  padding-top: 42px;
-  padding-right: 110px;
-  padding-bottom: 12px;
-  padding-left: 115px;
-  margin: 0;
+  padding: 0;
+  margin-top: 46px;
+  margin-right: 110px;
+  margin-bottom: 24px;
+  margin-left: 115px;
 }
 .features-list-two-color p {
   font-size: 14px;
   line-height: 21px;
-  padding-left: 48px;
-  padding-right: 50px;
-  padding-bottom: 8px;
   font-weight: 400;
+
+  padding: 0;
+  margin-left: 48px;
+  margin-right: 50px;
+  margin-bottom: 23px;
 }
 .features-list {
   list-style: none;
@@ -212,12 +238,18 @@ img {
 .features-item h3 {
   font-size: 21px;
   line-height: 21px;
+
+  padding: 0;
+  padding-top: 0px;
+  margin: 0;
+  margin-top: 21px;
+  margin-bottom: 20px;
 }
 .features-item p {
   color: #333333;
-  margin-top: 0;
+  margin-top: 24px;
   margin-right: 50px;
-  margin-bottom: 87px;
+  margin-bottom: 83px;
   margin-left: 50px;
 }
 .grey {
@@ -227,17 +259,17 @@ img {
   padding-bottom: 20px;
 }
 .grey h3 {
-  padding-top: 47px;
-  padding-right: 145px;
-  padding-left: 140px;
-  padding-bottom: 26px;
-  margin: 0;
+  margin-top: 47px;
+  margin-right: 145px;
+  margin-left: 140px;
+  margin-bottom: 24px;
+  padding: 0;
   color: #000000;
 }
 .grey p {
   margin-top: 0;
   margin-right: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-left: 40px;
   color: #333333;
 }
@@ -247,7 +279,8 @@ img {
   content: url("../img/home.svg");
   position: absolute;
   left: 162px;
-  bottom: 198px;
+  bottom: 194px;
+
 
 }
 .food::before {
@@ -259,8 +292,8 @@ img {
 .box::before {
   content: url("../img/box.svg");
   position: absolute;
-  left: 162px;
-  bottom: 198px;
+  left: 168px;
+  bottom: 196px;
 }
 
 .subtitle {
@@ -268,11 +301,15 @@ img {
   font-size: 30px;
   line-height: 36px;
   color: #000000;
-  margin-top: 50px;
+  
+  padding: 0;
+  margin: 0;
+  margin-top: 49px;
+  margin-bottom: 23px;
 }
 .subtitle-btn {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 44px;
   
 }
 .search-main {
@@ -280,8 +317,8 @@ img {
   line-height: 26px;
   text-transform: uppercase;
   font-weight: 700;
-  width: 570px;
-  padding-top: 30px;
+  width: 568px;
+  padding-top: 28px;
   padding-bottom: 33px;
   margin: 0;
 
@@ -315,11 +352,13 @@ img {
 .date-in,
 .date-out {
   position: relative;
+  margin-top: 15px;
+  margin-left: 2px;
 }
 .calendar {
   border: none;
   position: absolute;
-  left: 420px;
+  left: 422px;
   top: 8px;
   background-color: #f2f2f2;
 }
@@ -341,18 +380,20 @@ img {
   text-align: center;
   background-color: #f2f2f2;
 }
-.btn-adults p,
-.btn-children p {
-  margin-right: 27px;
+.btn-adults label,
+.btn-children label {
+  margin-right: 26px;
+  margin-top: 12px;
 }
 
 .number-guest-btn {
-  width: 41px;
+  width: 38px;
   height: 38px;
   border: none;
   background-color: #f2f2f2;
   padding: 0;
   margin: 0;
+  margin-top: 3px;
 }
 .left {
   margin-left: 15px;
@@ -364,13 +405,15 @@ img {
   line-height: 26px;
   text-transform: uppercase;
   font-weight: 700;
-  width: 459px;
+  width: 458px;
   background-color: #81b3d2;
   border: none;
 
-  padding-top: 15px;
-  padding-bottom: 16px;
+  margin-top: 5px;
   margin-bottom: 55px;
+  padding-top: 15px;
+  padding-bottom: 17px;
+  
 }
 .found a {
   padding-top: auto;
@@ -381,7 +424,7 @@ img {
 
 .map {
   background-image: url("../img/map.png");
-  background-position: bottom;
+  background-position: right -52px top 0;
   background-repeat: no-repeat;
   background-size: 1718px 748px;
   position: relative;
@@ -404,19 +447,23 @@ img {
 }
 
 .footer-contacts {
-  margin-left: 132px;
   font-size: 21px;
-  line-height: 26px
+  line-height: 26px;
+  color: #000000;
+
+  margin-left: 132px;
+  margin-bottom: 6px;
 }
 .footer-social {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 152px;
+  width: 151px;
   margin: 0 auto;
+  margin-left: 256px;
   padding: 0;
-  padding-left: 32px;
+ 
 }
 .social-button {
   display: flex;
@@ -439,10 +486,15 @@ img {
 }
 
 .footer-htmlacademy {
-  margin-right: 8px;
+  padding: 0;
+  margin: 0;
+  margin-right: 7px;
+  margin-bottom: 4px;
+  
 }
 .htmlacademy-btn {
   margin-right: 100px;
+  margin-top: 3px;
 }
 .htmlacademy-btn:focus path,
 .htmlacademy-btn:hover path {
