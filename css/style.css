@@ -666,8 +666,10 @@ fieldset {
   margin-top: 8px;
   margin-bottom: 15px;
 }
+
 .cost span {
-  margin-left: 36px;
+  display: inline-block;
+  min-width: 112px;
 }
 /* .cost span:nth-child(3) {
   margin-left: 60px;
@@ -732,8 +734,9 @@ fieldset {
   text-align: right;
   margin-top: 30px;
 }
-.rating:first-child {
-  margin-right: 3px;
+.rating {
+  display: inline-block;
+  margin-left: 2px;
 }
 
 
@@ -874,7 +877,7 @@ fieldset {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
+  line-height: 30px;
   vertical-align: top;
 
   cursor: pointer;
@@ -883,7 +886,7 @@ fieldset {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 60px;
+  padding-left: 62px;
 }
 
 .price-controls input {
