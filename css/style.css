@@ -526,6 +526,7 @@ img {
 }
 .points {
   display: flex;
+  padding-bottom: 24px;
 }
 fieldset {
   border: none;
@@ -536,15 +537,16 @@ fieldset {
 
 .catalog-content {
   background-color: #ffffff;
-  margin-left: 73px;
+  /* margin-left: 73px;
   margin-right: 73px;
-  margin-bottom: -8px;
+  margin-bottom: -8px; */
   
 }
 .catalog-found {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin: 0 73px;
   margin-bottom: 18px;
 }
 .catalog-found h3 {
@@ -553,7 +555,7 @@ fieldset {
 
   padding: 0;
   margin: 0;
-  margin-top: 32px;
+  margin-top: 30px;
 }
 .catalog-list {
   list-style: none;
@@ -565,20 +567,18 @@ fieldset {
   font-size: 12px;
   line-height: 18px;
 
-  margin-top: 25px;
+  margin-top: 22px;
   margin-left: 40px;
 }
 .catalog-item:first-child {
-  margin-left: 5px;
+  margin-left: 6px;
 }
-.catalog-item:nth-child(3) {
-  margin-left: 34px;
-  margin-top: 24px;
-}
+.catalog-item:nth-child(3),
 .catalog-item:nth-child(4) {
   margin-left: 34px;
-  margin-top: 24px;
+  
 }
+
 .btn {
   color: #cacaca;
 }
@@ -591,13 +591,13 @@ fieldset {
 }
 .btn-arrow {
   margin-left: auto;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 .arrow-up {
   border: none;
   padding: 0;
   margin-top: 25px;
-  margin-right: 5px;
+  margin-right: 4px;
   background: none;
 }
 .arrow-up svg {
@@ -624,72 +624,23 @@ fieldset {
   fill: #81b3d2;
 }
 
-.hotel-amara {
-  padding: 0;
+.found-hotel {
+  padding: 0 72px;
   margin: 0;
+  margin-bottom: -3px;
+
+  border-top: 1px solid #e5e5e5;
+
   display: flex;
-  
-  /* Вопрос: Как сделать границы во всю ширину? Добавлял border или outline. 
-  Но граница рисуется только до заданных отступов в catalog-content. 
-  Можно ли убирая отступы у catalog-content сделать линии во всю страницу? Или так не получится? */
+    
 }
-.hotel-amara::before {
-  content: "";
-  position: absolute;
-
-  width: 1200px;
-  height: 2px;
-
-  background: #e5e5e5;
-  transform: translate(-6%, 0%);
-
-  /* Вопрос: Можно ли использовать такое решение для границ?
-  Но тут другая проблема, не хватает пары пикселей, чтобы красиво встала на всю ширину страницы
-  \\  И у меня не получается отлипить картинку от этой линии - это вроде решил, но не уверен правильно ли \\
-  Также не получается добавить самую нижнию линию*/
-}
-.hotel-desert::before {
-  content: "";
-  position: absolute;
-
-  width: 1200px;
-  height: 2px;
-
-  background: #e5e5e5;
-  transform: translate(-6%, 0%);
-}
-.hotel-villas::before {
-  content: "";
-  position: absolute;
-
-  width: 1200px;
-  height: 2px;
-
-  background: #e5e5e5;
-  transform: translate(-6%, 0%);
-}
-
-.hotel-amara-img {
+.hotel-img {
   margin-top: 30px;
+  margin-right: 20px;
 }
-.hotel-desert-img {
-  margin-top: 27px;
-}
-.hotel-villas-img {
-  margin-top: 25px;
-}
-.hotel-desert {
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-.hotel-villas {
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+
 .about-hotel {
-  margin-left: 28px;
+  margin-left: 10px;
 }
 
 .hotel-name {
@@ -698,6 +649,7 @@ fieldset {
   color: #000000;
   margin-top: 24px;
   margin-bottom: 0;
+  margin-left: 1px;
 }
 .hotel-name:hover,
 .hotel-name:focus {
@@ -711,27 +663,26 @@ fieldset {
   font-size: 14px;
   line-height: 21px;
   color: #333333;
-  margin-top: 7px;
+  margin-top: 8px;
+  margin-bottom: 15px;
 }
 .cost span {
   margin-left: 36px;
 }
+/* .cost span:nth-child(3) {
+  margin-left: 60px;
+} */
 
-.info-buy {
-  display: flex;
-  padding-top: 1px;
-  /* Вопрос: Проблема с размерами кнопок. Они получаются слишком жирными по сравнению с оригиналом.
-  Я не туда свойство указываю, или не там класс задал? */
-}
 .detail {
   display: inline-block;
-  margin-bottom: 17px;
-  padding-top: 4px;
-  padding-right: 16px;
-  padding-left: 17px;
-  margin-right: 3.5px;
 
-  font: inherit;
+  margin-right: 3.5px;
+  padding-top: 13px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  padding-left: 17px;
+  
+  line-height: 0;
   text-align: center;
   color: #ffffff;
   
@@ -750,14 +701,15 @@ fieldset {
 
 .reserv {
   display: inline-block;
-  margin-bottom: 17px;
-  padding-top: 4px;
-  padding-right: 16px;
-  padding-bottom: 4px;
-  padding-left: 17px;
-  margin-right: 3.5px;
 
-  font: inherit;
+  margin-right: 3.5px;
+  padding-top: 13px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  padding-left: 17px;
+  
+
+  line-height: 0;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -778,24 +730,23 @@ fieldset {
 }
 .rate-star {
   text-align: right;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 .rating:first-child {
-  margin-right: 4px;
-}
-.rating:nth-child(2) {
   margin-right: 3px;
 }
 
-.rate p {
-  display: block;
 
+.rate p {
+  display: inline-block;
+  line-height: 0;
+
+  margin-top: 41px;
+  margin-bottom: 33px;
+  padding-top: 13px;
+  padding-right: 12px;
+  padding-bottom: 14px;
   padding-left: 15px;
-  padding-top: 9px;
-  padding-right: 11px;
-  padding-bottom: 6px;
-  margin-top: 34px;
-  margin-bottom: 31px;
   
   color: #666666;
   background-color: #f2f2f2;
@@ -811,23 +762,31 @@ fieldset {
 .points-two legend {
   font-size: 16px;
   line-height: 21px;
-  padding-top: 28px;
-  margin-bottom: 20px;
-}
-.points-two {
-  margin-left: 94px;
 }
 .points-one,
 .points-two {
   color: #ffffff;
+  margin-top: 25px;
+  
+}
+.points-two {
+  margin-left: 95px;
 }
 .points-one p,
 .points-two p {
   margin: 0;
   padding: 0;
-  padding-bottom: 23px;
-
+  margin-top: 19px;
 }
+.points-one p:nth-child(3),
+.points-two p:nth-child(3) {
+  margin-top: 26px;
+}
+.points-one p:nth-child(4),
+.points-two p:nth-child(4) {
+  margin-top: 24px;
+}
+
 .catalog-points {
   font-weight: 400;
   margin: 0;
@@ -851,8 +810,8 @@ fieldset {
   /* Определяем вид основного чекбокса */
 	content: url("../img/checkboxoff.svg");
 	position: absolute;
-	top: -4px;
-	left: -39px;
+	/* top: -4px; */
+	left: -40px;
 }
 .checkbox:checked + label:before {
   /* определяем вид чекбокса осле нажатия */
@@ -867,9 +826,9 @@ fieldset {
 /* Стили для фильтра */
 
 .filter-range {
-  width: 320px;
+  width: 317px;
   margin-top: 25px;
-  margin-left: 338px;
+  margin-left: 337px;
 
 
   color: #ffffff;
@@ -877,9 +836,9 @@ fieldset {
 }
 
 .filter-range-title {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 21px;
 }
@@ -887,7 +846,7 @@ fieldset {
 .price-controls {
   position: relative;
   
-  height: 35px;
+  height: 33px;
   margin-bottom: 20px;
   
   font-size: 0;
@@ -901,7 +860,7 @@ fieldset {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 158px;
 
   width: 2px;
   height: 22px;
@@ -941,7 +900,7 @@ fieldset {
 .range-controls {
   position: relative;
 
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .range-controls .scale {
@@ -980,7 +939,7 @@ fieldset {
 }
 
 .range-toggle-max {
-  left: 79%;
+  left: 80%;
 }
 
 .btn-transparent {
