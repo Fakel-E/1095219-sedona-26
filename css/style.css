@@ -338,6 +338,14 @@ img {
   z-index: 1;
   background-color: #ffffff;
 }
+.popup-err {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+.popup-animation {
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
 .check-in,
 .check-out {
   width: 346px;
@@ -416,7 +424,7 @@ img {
   
 }
 .found a {
-  padding-top: auto;
+  margin-top: auto;
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
@@ -429,6 +437,11 @@ img {
   background-size: 1718px 748px;
   position: relative;
   padding-top: 500px;
+}
+.map iframe {
+  position: absolute;
+  top: 0px;
+  border:0;
 }
 
 .footer {
@@ -670,10 +683,8 @@ fieldset {
 .cost span {
   display: inline-block;
   min-width: 112px;
+  vertical-align: middle;
 }
-/* .cost span:nth-child(3) {
-  margin-left: 60px;
-} */
 
 .detail {
   display: inline-block;
@@ -703,6 +714,7 @@ fieldset {
 
 .reserv {
   display: inline-block;
+  vertical-align: middle;
 
   margin-right: 3.5px;
   padding-top: 13px;
@@ -736,12 +748,14 @@ fieldset {
 }
 .rating {
   display: inline-block;
+  vertical-align: middle;
   margin-left: 2px;
 }
 
 
 .rate p {
   display: inline-block;
+  vertical-align: middle;
   line-height: 0;
 
   margin-top: 41px;
@@ -967,4 +981,16 @@ fieldset {
   color: #000000;
 
   background: #ffffff;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+@keyframes bounce {
+  0% { transform: translateY(-100px); }
+  70% { transform: translateY(30px); }
+  90% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
