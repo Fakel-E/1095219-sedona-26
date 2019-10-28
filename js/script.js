@@ -22,10 +22,7 @@ window.addEventListener("keydown", function(evt) { //закрываем попа
 form.addEventListener("submit", function (evt) {
   if (!date.value)
   evt.preventDefault();
-  popup.classList.add("popup-err");
-  function del(){
-    popup.classList.remove("popup-err");
-  }
-  setTimeout(del, 800);
-  
+  popup.classList.remove("popup-err");
+  popup.offsetWidth = popup.offsetWidth;
+  popup.classList.add("popup-err");  
 })
