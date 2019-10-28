@@ -10,7 +10,7 @@ btn.addEventListener("click", function(evt) {
   date.focus();
 })
 
-window.addEventListener("keydown", function(evt) { /*закрываем попап по esc*/
+window.addEventListener("keydown", function(evt) { //закрываем попап по esc
   if (evt.keyCode === 27) {
     if (popup.classList.contains("popup")) {
       evt.preventDefault();
