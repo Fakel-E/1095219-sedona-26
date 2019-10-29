@@ -1,8 +1,5 @@
 body {
-	margin: 0;
 	padding: 0;
-	margin-left: 40px;
-	margin-right: 40px;
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
@@ -25,6 +22,8 @@ img {
 	width: 1200px;
 	margin: 0 auto;
 	background-color: #ffffff;
+	-webkit-box-shadow: 0px 0px 30px 15px #dbdbdb;
+	box-shadow: 0px 0px 30px 15px #dbdbdb;
 }
 
 .main-header {
@@ -361,6 +360,7 @@ img {
 	background-color: #766357;
 	color: #ffffff;
 	border: none;
+	display: inline-block;
 }
 
 .popup {
@@ -551,6 +551,7 @@ img {
 	justify-content: space-between;
 	width: 151px;
 	margin: 0 auto;
+	margin-top: -3px;
 	margin-left: 256px;
 	padding: 0;
 }
@@ -634,7 +635,7 @@ img {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	padding-bottom: 24px;
+	padding-bottom: 23px;
 }
 
 fieldset {
@@ -761,7 +762,7 @@ fieldset {
 }
 
 .hotel-img {
-	margin-top: 30px;
+	margin-top: 29px;
 	margin-right: 20px;
 }
 
@@ -773,7 +774,7 @@ fieldset {
 	font-size: 21px;
 	line-height: 26px;
 	color: #000000;
-	margin-top: 24px;
+	margin-top: 25px;
 	margin-bottom: 0;
 	margin-left: 1px;
 }
@@ -792,7 +793,7 @@ fieldset {
 	line-height: 21px;
 	color: #333333;
 	margin-top: 8px;
-	margin-bottom: 15px;
+	margin-bottom: 14px;
 }
 
 .cost span {
@@ -828,7 +829,6 @@ fieldset {
 
 .reserv {
 	display: inline-block;
-	vertical-align: middle;
 	margin-right: 3.5px;
 	padding-top: 13px;
 	padding-right: 16px;
