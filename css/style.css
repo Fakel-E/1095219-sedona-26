@@ -413,10 +413,12 @@ img {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 .check-in:hover,
 .check-out:hover {
 	background-color: #ebebeb;
 }
+
 .check-in:focus,
 .check-out:focus {
 	background-color: #ffffff;
@@ -436,15 +438,19 @@ img {
 	top: 8px;
 	background-color: #f2f2f2;
 }
+
 .calendar svg {
 	fill: #a9a9a9;
 }
+
 .calendar svg:hover {
 	fill: #000000;
 }
+
 .calendar svg:active {
 	fill: #81b3d2;
 }
+
 .number-guest {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -489,9 +495,19 @@ img {
 	padding: 0;
 	margin: 0;
 	margin-top: 3px;
+	cursor: pointer;
 }
+
+.number-guest-btn svg {
+	fill: #a9a9a9;
+}
+
 .number-guest-btn svg:hover {
-	color: #000000;
+	fill: #000000;
+}
+
+.number-guest-btn svg:active {
+	fill: #81b3d2;
 }
 
 .left {
@@ -712,7 +728,6 @@ fieldset {
 	line-height: 18px;
 	margin-top: 22px;
 	margin-left: 40px;
-	
 }
 
 .catalog-item:first-child {
@@ -729,6 +744,7 @@ fieldset {
 	cursor: pointer;
 	border-bottom: 1px dotted #a3c7de;
 }
+
 .active {
 	border: none;
 	color: #81b3d2;
@@ -738,7 +754,6 @@ fieldset {
 .btn:focus {
 	color: #a3c7de;
 	border-bottom: 1px dotted #a3c7de;
-	
 }
 
 .btn:active {
@@ -972,13 +987,13 @@ fieldset {
 	opacity: 0;
 }
 
-.checkbox + .catalog-points {
+.checkbox+.catalog-points {
 	/* определяем относительно какого элемента absolute + определяем курсор */
 	position: relative;
 	cursor: pointer;
 }
 
-.checkbox + .catalog-points:before {
+.checkbox+.catalog-points:before {
 	/* Определяем вид основного чекбокса */
 	content: '';
 	background: url("../img/checkboxoff.svg") 0 0 no-repeat;
@@ -988,16 +1003,16 @@ fieldset {
 	height: 23px;
 }
 
-.checkbox:checked + .catalog-points:before {
+.checkbox:checked+.catalog-points:before {
 	/* определяем вид чекбокса осле нажатия */
 	background: url("../img/checkboxon.svg") 0 0 no-repeat;
 }
 
-.checkbox:focus + .catalog-points {
+.checkbox:focus+.catalog-points {
 	outline: 1px solid #88b6d1;
 }
 
-.checkbox:disabled + .catalog-points:before {
+.checkbox:disabled+.catalog-points:before {
 	opacity: 0.3;
 }
 
