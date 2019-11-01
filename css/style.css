@@ -3,7 +3,7 @@ body {
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
-	font-weight: 700;
+	font-weight: 400;
 	color: #000000;
 	text-transform: uppercase;
 	background-color: #f2f2f2;
@@ -66,6 +66,7 @@ img {
 	width: 100%;
 	padding-left: 73px;
 	padding-right: 73px;
+	font-weight: 700;
 }
 
 .site-nav li {
@@ -131,12 +132,13 @@ img {
 	text-align: center;
 	font-size: 21px;
 	line-height: 26px;
+	font-weight: 700;
 	padding: 0;
 	margin: 0;
 	margin-top: 59px;
-	margin-right: 18px;
+	margin-right: 379px;
 	margin-bottom: 30px;
-	margin-left: 28px;
+	margin-left: 375px;
 }
 
 .features-fraze {
@@ -305,9 +307,9 @@ img {
 
 .grey p {
 	margin-top: 0;
-	margin-right: 40px;
+	margin-right: 68px;
 	margin-bottom: 21px;
-	margin-left: 40px;
+	margin-left: 73px;
 	color: #333333;
 }
 
@@ -361,6 +363,7 @@ img {
 	color: #ffffff;
 	border: none;
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .popup {
@@ -380,6 +383,7 @@ img {
 	position: absolute;
 	z-index: 1;
 	background-color: #ffffff;
+	font-weight: 700;
 }
 
 .popup-animation {
@@ -402,11 +406,20 @@ img {
 	height: 38px;
 	background-color: #f2f2f2;
 	color: #000000;
+	font-weight: 700;
 	border: none;
 	margin-left: 21px;
 	padding-left: 12px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+.check-in:hover,
+.check-out:hover {
+	background-color: #ebebeb;
+}
+.check-in:focus,
+.check-out:focus {
+	background-color: #ffffff;
 }
 
 .date-in,
@@ -423,7 +436,15 @@ img {
 	top: 8px;
 	background-color: #f2f2f2;
 }
-
+.calendar svg {
+	fill: #a9a9a9;
+}
+.calendar svg:hover {
+	fill: #000000;
+}
+.calendar svg:active {
+	fill: #81b3d2;
+}
 .number-guest {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -451,6 +472,7 @@ img {
 	border: none;
 	text-align: center;
 	background-color: #f2f2f2;
+	font-weight: 700;
 }
 
 .btn-adults label,
@@ -467,6 +489,9 @@ img {
 	padding: 0;
 	margin: 0;
 	margin-top: 3px;
+}
+.number-guest-btn svg:hover {
+	color: #000000;
 }
 
 .left {
@@ -523,6 +548,7 @@ img {
 	-ms-flex-align: center;
 	align-items: center;
 	background-color: rgba(249, 250, 248, 0.9);
+	font-weight: 700;
 }
 
 .footer-main {
@@ -686,6 +712,7 @@ fieldset {
 	line-height: 18px;
 	margin-top: 22px;
 	margin-left: 40px;
+	
 }
 
 .catalog-item:first-child {
@@ -699,11 +726,19 @@ fieldset {
 
 .btn {
 	color: #cacaca;
+	cursor: pointer;
+	border-bottom: 1px dotted #a3c7de;
+}
+.active {
+	border: none;
+	color: #81b3d2;
 }
 
 .btn:hover,
 .btn:focus {
 	color: #a3c7de;
+	border-bottom: 1px dotted #a3c7de;
+	
 }
 
 .btn:active {
@@ -798,23 +833,24 @@ fieldset {
 
 .cost span {
 	display: inline-block;
-	min-width: 112px;
 	vertical-align: middle;
+	min-width: 112px;
 }
 
 .detail {
 	display: inline-block;
+	vertical-align: middle;
 	margin-right: 3.5px;
-	padding-top: 13px;
+	padding-top: 3px;
 	padding-right: 16px;
-	padding-bottom: 14px;
+	padding-bottom: 3px;
 	padding-left: 17px;
-	line-height: 0;
 	text-align: center;
 	color: #ffffff;
 	text-transform: uppercase;
 	background-color: #81b3d2;
 	border: none;
+	font-weight: 700;
 }
 
 .detail:hover,
@@ -829,17 +865,18 @@ fieldset {
 
 .reserv {
 	display: inline-block;
+	vertical-align: middle;
 	margin-right: 3.5px;
-	padding-top: 13px;
+	padding-top: 3px;
 	padding-right: 16px;
-	padding-bottom: 14px;
+	padding-bottom: 3px;
 	padding-left: 17px;
-	line-height: 0;
 	text-align: center;
 	color: #ffffff;
 	text-transform: uppercase;
 	background-color: #766357;
 	border: none;
+	font-weight: 700;
 }
 
 .reserv:hover,
@@ -935,29 +972,32 @@ fieldset {
 	opacity: 0;
 }
 
-.checkbox+label {
+.checkbox+.catalog-points {
 	/* определяем относительно какого элемента absolute + определяем курсор */
 	position: relative;
 	cursor: pointer;
 }
 
-.checkbox+label:before {
+.checkbox+.catalog-points:before {
 	/* Определяем вид основного чекбокса */
-	content: url("../img/checkboxoff.svg");
+	content: '';
+	background: url("../img/checkboxoff.svg") 0 0 no-repeat;
 	position: absolute;
 	left: -40px;
+	width: 27px;
+	height: 23px;
 }
 
-.checkbox:checked+label:before {
+.checkbox:checked+.catalog-points:before {
 	/* определяем вид чекбокса осле нажатия */
-	content: url("../img/checkboxon.svg");
+	background: url("../img/checkboxon.svg") 0 0 no-repeat;
 }
 
-.checkbox:focus+label:before {
-	border: 1.5px solid #88b6d1;
+.checkbox:focus+.catalog-points {
+	outline;: 1px solid #88b6d1;
 }
 
-.checkbox:disabled+label:before {
+.checkbox:disabled+.catalog-points:before {
 	opacity: 0.3;
 }
 
@@ -1004,9 +1044,9 @@ fieldset {
 
 .price-controls label {
 	display: inline-block;
+	vertical-align: top;
 	font-size: 14px;
 	line-height: 30px;
-	vertical-align: top;
 	cursor: pointer;
 }
 
