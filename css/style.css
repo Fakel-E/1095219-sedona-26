@@ -972,13 +972,13 @@ fieldset {
 	opacity: 0;
 }
 
-.checkbox+.catalog-points {
+.checkbox + .catalog-points {
 	/* определяем относительно какого элемента absolute + определяем курсор */
 	position: relative;
 	cursor: pointer;
 }
 
-.checkbox+.catalog-points:before {
+.checkbox + .catalog-points:before {
 	/* Определяем вид основного чекбокса */
 	content: '';
 	background: url("../img/checkboxoff.svg") 0 0 no-repeat;
@@ -988,16 +988,16 @@ fieldset {
 	height: 23px;
 }
 
-.checkbox:checked+.catalog-points:before {
+.checkbox:checked + .catalog-points:before {
 	/* определяем вид чекбокса осле нажатия */
 	background: url("../img/checkboxon.svg") 0 0 no-repeat;
 }
 
-.checkbox:focus+.catalog-points {
-	outline;: 1px solid #88b6d1;
+.checkbox:focus + .catalog-points {
+	outline: 1px solid #88b6d1;
 }
 
-.checkbox:disabled+.catalog-points:before {
+.checkbox:disabled + .catalog-points:before {
 	opacity: 0.3;
 }
 
