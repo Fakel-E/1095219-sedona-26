@@ -540,13 +540,11 @@ img {
 	background-image: url("../img/map.png");
 	background-position: right -52px top 0;
 	background-repeat: no-repeat;
-	background-size: 1718px 748px;
+	background-size: 1718px 595px;
 	position: relative;
-	padding-top: 597px;
 }
 
 .map iframe {
-	position: absolute;
 	top: 0px;
 	border: none;
 }
@@ -568,7 +566,7 @@ img {
 }
 
 .footer-main {
-	margin-top: -126px;
+	margin-top: -129px;
 	width: 1200px;
 	position: relative;
 }
